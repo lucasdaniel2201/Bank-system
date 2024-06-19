@@ -2,8 +2,10 @@ limite = 500
 limiteDeposito = 1000
 saldo = 1000
 
+welcome = "Seja bem vindo(a) ao LBank"
+print(welcome.center(80, "#"))
+print("")
 opcao = int(input("Selecione qual opção deseja: [1] saque [2] Extrato [3] Depósito: "))
-
 if opcao == 1:
 
     while True:
@@ -43,8 +45,9 @@ if opcao == 1:
                 print("Erro: Insíra um número válido")
 
 elif opcao == 2:
-    print("exibindo o extrato:")
+    print("exibindo o extrato:...")
     print(f"Seu saldo é: R${saldo: .2f} ")    
+    print("Muito obrigado por utilizar nossos serviços, volte sempre!")
 
 elif opcao == 3:
 
