@@ -1,6 +1,7 @@
 limite = 500
 limiteDeposito = 1000
 saldo = 1000
+limiteSaque = 2
 
 welcome = "Seja bem vindo(a) ao LBank"
 print(welcome.center(80, "#"))
@@ -9,6 +10,8 @@ while True:
     try:
         opcao = int(input("Selecione qual opção deseja: [1] saque [2] Extrato [3] Depósito: ")) 
         if opcao == 1:
+
+            numeroSaque = 1
 
             while True:
 
@@ -25,9 +28,13 @@ while True:
                         print(f"Seu limite de saque é: R${limite: .2f}")
                     elif valor > saldo:
                         print("Saldo Insuficiente")
+                    elif numeroSaque > limiteSaque:
+                        print("Limite de saque atingido")
+                        break
                     else:
                         saldo -= valor
                         print(f"seu saque foi concluído. Seu novo saldo é: R${saldo: .2f}")
+                        numeroSaque += 1
                         while True:
                             new_input = input(f"Gostaria de fazer outro saque? [1]Sim  [2]Não: ")
                             try:
