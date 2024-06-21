@@ -1,4 +1,4 @@
-limite = 500
+limite = 600
 limiteDeposito = 1000
 saldo = 1000
 limiteSaque = 2
@@ -28,6 +28,7 @@ while True:
                         print(f"Seu limite de saque é: R${limite: .2f}")
                     elif valor > saldo:
                         print("Saldo Insuficiente")
+                        break
                     elif numeroSaque > limiteSaque:
                         print("Limite de saque atingido")
                         break
@@ -49,7 +50,7 @@ while True:
                             except ValueError:
                                 print("Erro: Insíra um número válido")
                 except ValueError:
-                        print("Erro: Insíra um número válido")
+                    print("Erro: Insíra um número válido")
 
         elif opcao == 2:
             print("exibindo o extrato:...")
@@ -87,7 +88,7 @@ while True:
                                 print("Erro: Insíra um número válido")
                 except ValueError:
                     print("Erro: Insíra um número válido") 
+        else:
+            print("digite uma opção válida")
     except ValueError:
         print("Erro: Insira um número válido")
-    else:
-        print("Digite uma opção válida")
