@@ -56,6 +56,7 @@ while True:
             print("exibindo o extrato:...")
             print(f"Seu saldo é: R${saldo: .2f} ")    
             print("Muito obrigado por utilizar nossos serviços, volte sempre!")
+            exit()
 
         elif opcao == 3:
             while True:
